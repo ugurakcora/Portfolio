@@ -55,7 +55,8 @@ body{
     opacity: .7;
 }
 
-.link.active::before{
+.link.active::before,
+.seperator::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -67,7 +68,8 @@ body{
     background: #fff;
 }
 
-.link.active::after{
+.link.active::after,
+.seperator::after{
     content: '';
     position: absolute;
     bottom: 2px;
@@ -158,4 +160,140 @@ body{
 .btn:hover{
     background: #fff;
     color: #ff3559;
+}
+
+/* about section */
+
+.about{
+    width: 100%;
+    height: auto;
+    padding: 50px 10vw;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.5em;
+    text-transform: capitalize;
+}
+
+.sub-heading{
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    opacity: .7;
+}
+
+.seperator{
+    width: 25%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.about-me-container{
+    margin: 150px 0 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 50px;
+}
+
+.left-col, .right-col{
+    position: relative;
+}
+
+.left-col::before{
+    content: 'yes, its me';
+    text-transform: capitalize;
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+.left-col::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 80px;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(-30deg);
+}
+
+.about-image{
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .25);
+}
+
+.about-para{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+
+.skill-container{
+    position: relative;
+    /* margin-top: 100px; */
+    margin: 100px 10vw 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.skill-card{
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #464646;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: .5;
+}
+
+.skill{
+    font-size: 2rem;
+    color: #464646;
+    line-height: 200px;
+}
+
+.skill-card:hover{
+    background: var(--bg);
+}
+
+.skill-card:hover .skill{
+    color: #fff;
+}
+
+.skill-card.large{
+    grid-column: 2 span;
+}
+
+/* project section */
+
+.project{
+    position: relative;
+    padding: 50px 10vw;
+}
+
+.filter{
+    width: fit-content;
+    display: block;
+    margin: 100px auto;
+}
+
+.filter-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    margin: 0px 5px 10px;
+    cursor: pointer;
+}
+
+.filter-btn.active{
+    background: #ff3559;
+    color: #fff;
 }
