@@ -273,7 +273,7 @@ body{
 
 /* project section */
 
-.project{
+.project, .contact{
     position: relative;
     padding: 50px 10vw;
 }
@@ -351,4 +351,48 @@ body{
 
 .project-card.hide{
     display: none;
+}
+
+
+/* Contact Form */
+
+.contact-form{
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+}
+
+.contact-form input, .message{
+    width: 100%;
+    display: block;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 30px 0;
+    text-transform: capitalize;
+    resize: none;
+}
+
+.message{
+    height: 200px;
+}
+
+.contact-form .name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name input{
+    width: 47%;
+    margin: 0;
+}
+
+.contact-form .btn{
+    display: block;
+    margin: auto;
+    cursor: pointer;
 }
